@@ -7,4 +7,8 @@ Implenting JavaScript when the user clicks on the cards it loops over the songs 
 
 <img width="1395" alt="Screenshot 2023-05-12 at 23 24 29" src="https://github.com/ArslanJav/Blue-Water-Music/assets/80915650/b2c561af-89ee-44ec-9bed-72e3bed60f80">
 
-Website URL: https://visionary-sprinkles-c9730c.netlify.app
+Website URL: https://loquacious-entremet-29566d.netlify.app
+
+
+
+)

@@ -6,19 +6,25 @@ for (var i = 0; i < startOrStopImgs.length; i++) {
 }
 
 // function that takes startOrStopImg elements with corresponding audio elements and add the onclick event handler with the abilty to play and pause the audio and when another is clicked, the first one will stop and the second one will play and so on
-function addAudioPlayPauseEvent(startOrStopImg, audio) {
+function addAudioPlayPauseEvent(startOrStopImg, audio, audios) {
   startOrStopImg.onclick = function () {
+    // Pause all other audios
+    for (var i = 0; i < audios.length; i++) {
+      if (audios[i] !== audio) audios[i].pause();
+    }
+
+    // Toggle between play and pause
     if (audio.paused) {
+      // If audio is paused, set the currentTime to 22 seconds and play
+      audio.currentTime = 22;
       audio.play();
-      for (var i = 0; i < audios.length; i++) {
-        if (audios[i] != audio) audios[i].pause();
-      }
-    } else audio.pause();
-    // audio starts playing at 22 seconds
-    audio.currentTime = 22;
-    audio.play();
+    } else {
+      // If audio is playing, pause it
+      audio.pause();
+    }
   };
 }
+
 
 // allows the user to know which audio is playing
 // when startOrStopImg is clicked add border 2px solid #D81E5B and when click on another one remove the border from the first one and add it to the second one and so on

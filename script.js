@@ -15,7 +15,7 @@ function addAudioPlayPauseEvent(startOrStopImg, audio) {
       }
     } else audio.pause();
     // audio starts playing at 22 seconds
-    audio.setTime = 22;
+    audio.currentTime = 22;
   };
 }
 
